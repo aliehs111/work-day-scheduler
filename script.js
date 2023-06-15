@@ -1,21 +1,15 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(document).ready(function(){
-  $("button").click(function(){
-    $("p").slideToggle();
-  });
-});
-///Below is the one line of starter code for js//
+
+
 $(function () {
-///////////////////////
+
 ///To display current day///This is from day.js
-var localizedFormat = require('dayjs/plugin/localizedFormat')
-dayjs.extend(localizedFormat)
 
-dayjs().format('lll')
-
-
+dayjs.extend(window.dayjs_plugin_localizedFormat)
+let todaysDate = dayjs().format('lll')
+$("#currentDay").text(todaysDate);
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -32,6 +26,22 @@ dayjs().format('lll')
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+let currentTime = dayjs().hour()
+
+
+$('.time-block').each(function(){
+ let hour = Number($(this).attr("id").split('-')[1])
+ if (currentTime > hour){
+  $(this).removeClass('present', 'future').addClass('past')
+  } else if(currentTime === hour){
+    $(this).removeClass('past', 'future').addClass('present')
+  } else{
+    $(this).removeClass('past', 'present').addClass('future')
+  }
+
+})
+
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
