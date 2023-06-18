@@ -22,7 +22,7 @@ First task was getting the date and time to work so to have something to work wi
 After it was technically complete, it seemed to need a little more instruction for the user.  So clarification of the hour blocks' colors was added to the heading and an alert was coded to confirm when input was save and remind user to save changes.
 
 ## Screenshot and Link 
-https://user-images.githubusercontent.com/128503077/246677420-9b5447e3-2a2e-47dc-bbad-8135fd1c2092.png
 
+![image](https://github.com/aliehs111/work-day-scheduler/assets/128503077/36f2c5a5-4a4a-4211-8c69-44cf7bf45596)
 
 https://aliehs111.github.io/work-day-scheduler/
