@@ -4,10 +4,17 @@ body {
 }
 
 header {
-  background-color: darkkhaki;
-  justify-self: center;
+  background-color: rgb(216, 128, 236);
 }
 
+h1, p {
+ text-align: center;
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+span {
+  font-style: italic;
+  font-weight: bold;
+}
 
 textarea {
   background: transparent;
@@ -42,12 +49,12 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #eda9ed;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #97e1c2;
   color: white;
 }
 

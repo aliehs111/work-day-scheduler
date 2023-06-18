@@ -28,7 +28,28 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
   
 })
+//Keeping notes here to go back and try to get this to work.  Abandoned this code from bootstrap for a more professional alert. The id (id="liveAlertBtn") needs to be on the parent div and that was problematic with the current design.  Plus it wouldn't x-out even though it has a built-in close feature.
+//https://getbootstrap.com/docs/5.3/components/alerts/
+// const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+// const appendAlert = (message, type) => {
+//   const wrapper = document.createElement('div')
+//   wrapper.innerHTML = [
+//     `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+//     `   <div>${message}</div>`,
+//     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+//     '</div>'
+//   ].join('')
 
+//   alertPlaceholder.append(wrapper)
+// }
+
+// const alertTrigger = document.getElementById('liveAlertBtn')
+// if (alertTrigger) {
+//   alertTrigger.addEventListener('click', () => {
+//     appendAlert('Nice, you triggered this alert message!', 'success')
+//   })
+// }
+/////////////////////////
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
