@@ -1,25 +1,14 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
 
 $(function () {
 
-///To display current day///This is from day.js
+///To display current day and time///This is using day.js:
 
 dayjs.extend(window.dayjs_plugin_localizedFormat)
 let todaysDate = dayjs().format('lll')
 $("#currentDay").text(todaysDate);
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. 
-  // HINT: What does `this` reference in the click listener function? //Answ: It refers to the element that generated the event//
-  // How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? 
-  // How might the id be useful when saving the description in local storage?
 
-
+//When user clicks the save button, they get and alert and their input is saved in local storage:
 $(".saveBtn").on("click", function () {
     alert("Event Saved! You may make changes to any events, but please be sure to click the save button each time!");
   console.log(this);
@@ -28,7 +17,7 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
   
 })
-//Keeping notes here to go back and try to get this to work.  Abandoned this code from bootstrap for a more professional alert. The id (id="liveAlertBtn") needs to be on the parent div and that was problematic with the current design.  Plus it wouldn't x-out even though it has a built-in close feature.
+//Keeping commented out code here to go back and try to get this to work.  Abandoned this code from bootstrap for a more professional alert. The id (id="liveAlertBtn") needs to be on the parent div and that was problematic with the current design.  Plus it wouldn't x-out even though it has a built-in close feature.
 //https://getbootstrap.com/docs/5.3/components/alerts/
 // const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 // const appendAlert = (message, type) => {
@@ -50,11 +39,8 @@ $(".saveBtn").on("click", function () {
 //   })
 // }
 /////////////////////////
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
 
+//User input will be available again at refresh:
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
 $("#hour-11 .description").val(localStorage.getItem("hour-11"));
@@ -66,18 +52,8 @@ $("#hour-16 .description").val(localStorage.getItem("hour-16"));
 $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 
-// function handleSave(event){
-//   event.preventDefault();
-//   console.log("keep user events")
-//   let userEvtInpt = $("input[id='eventInput']").val();
-//   console.log(userEnvInpt)
-// }
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
+
+//So that the hour blocks are color-coded for past present and future hours:
 let currentTime = dayjs().hour()
 
 
