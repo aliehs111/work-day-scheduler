@@ -3,6 +3,12 @@ body {
   font-size: 16px;
 }
 
+header {
+  background-color: darkkhaki;
+  justify-self: center;
+}
+
+
 textarea {
   background: transparent;
   border: none;
