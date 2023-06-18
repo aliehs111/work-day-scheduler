@@ -1,5 +1,5 @@
 # work-day-scheduler
-This is daily schedule application that allows a user to save events for each hour of a typical working day.
+This is a daily schedule application that allows a user to save events for each hour of a typical working day.
 
 ## Overview
 
@@ -24,5 +24,4 @@ After it was technically complete, it seemed to need a little more instruction f
 ## Screenshot and Link 
 
 
-
-
+https://aliehs111.github.io/work-day-scheduler/
